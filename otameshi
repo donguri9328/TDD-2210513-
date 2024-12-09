@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <assert.h>
+#include "../include/palindrome.h"
+
+void test_palindrome() {
+    assert(is_palindrome("racecar") == 1);  // 回文なので true
+    assert(is_palindrome("hello") == 0);    // 回文でないので false
+    assert(is_palindrome("") == 1);         // 空文字列も回文
+    assert(is_palindrome("a") == 1);        // 1文字は回文
+    printf("All tests passed!\n");
+}
+
+int main() {
+    test_palindrome();
+    return 0;
+}
+
